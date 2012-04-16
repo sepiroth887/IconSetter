@@ -1,0 +1,257 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7D325BD153C646600CF0159 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D325BC153C646600CF0159 /* CoreData.framework */; };
+		F7D325BF153C646600CF0159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D325BE153C646600CF0159 /* Foundation.framework */; };
+		F7D325C2153C646600CF0159 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D325C1153C646600CF0159 /* main.m */; };
+		F7D325C7153C646600CF0159 /* IconSetter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7D325C5153C646600CF0159 /* IconSetter.xcdatamodeld */; };
+		F7D325C9153C646600CF0159 /* IconSetter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7D325C8153C646600CF0159 /* IconSetter.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F7D325B6153C646500CF0159 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				F7D325C9153C646600CF0159 /* IconSetter.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F7D325B8153C646500CF0159 /* IconSetter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IconSetter; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7D325BC153C646600CF0159 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F7D325BE153C646600CF0159 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F7D325C1153C646600CF0159 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7D325C4153C646600CF0159 /* IconSetter-Prefix.pch */ = {isa = PBXFileReference; path = "IconSetter-Prefix.pch"; sourceTree = "<group>"; };
+		F7D325C6153C646600CF0159 /* IconSetter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IconSetter.xcdatamodel; sourceTree = "<group>"; };
+		F7D325C8153C646600CF0159 /* IconSetter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = IconSetter.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7D325B5153C646500CF0159 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7D325BD153C646600CF0159 /* CoreData.framework in Frameworks */,
+				F7D325BF153C646600CF0159 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7D325AD153C646500CF0159 = {
+			isa = PBXGroup;
+			children = (
+				F7D325C0153C646600CF0159 /* IconSetter */,
+				F7D325BB153C646500CF0159 /* Frameworks */,
+				F7D325B9153C646500CF0159 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7D325B9153C646500CF0159 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7D325B8153C646500CF0159 /* IconSetter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7D325BB153C646500CF0159 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7D325BC153C646600CF0159 /* CoreData.framework */,
+				F7D325BE153C646600CF0159 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7D325C0153C646600CF0159 /* IconSetter */ = {
+			isa = PBXGroup;
+			children = (
+				F7D325C1153C646600CF0159 /* main.m */,
+				F7D325C8153C646600CF0159 /* IconSetter.1 */,
+				F7D325C5153C646600CF0159 /* IconSetter.xcdatamodeld */,
+				F7D325C3153C646600CF0159 /* Supporting Files */,
+			);
+			path = IconSetter;
+			sourceTree = "<group>";
+		};
+		F7D325C3153C646600CF0159 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7D325C4153C646600CF0159 /* IconSetter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7D325B7153C646500CF0159 /* IconSetter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7D325CC153C646600CF0159 /* Build configuration list for PBXNativeTarget "IconSetter" */;
+			buildPhases = (
+				F7D325B4153C646500CF0159 /* Sources */,
+				F7D325B5153C646500CF0159 /* Frameworks */,
+				F7D325B6153C646500CF0159 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IconSetter;
+			productName = IconSetter;
+			productReference = F7D325B8153C646500CF0159 /* IconSetter */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7D325AF153C646500CF0159 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = F7D325B2153C646500CF0159 /* Build configuration list for PBXProject "IconSetter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F7D325AD153C646500CF0159;
+			productRefGroup = F7D325B9153C646500CF0159 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7D325B7153C646500CF0159 /* IconSetter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7D325B4153C646500CF0159 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7D325C2153C646600CF0159 /* main.m in Sources */,
+				F7D325C7153C646600CF0159 /* IconSetter.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F7D325CA153C646600CF0159 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F7D325CB153C646600CF0159 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F7D325CD153C646600CF0159 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IconSetter/IconSetter-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7D325CE153C646600CF0159 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IconSetter/IconSetter-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7D325B2153C646500CF0159 /* Build configuration list for PBXProject "IconSetter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7D325CA153C646600CF0159 /* Debug */,
+				F7D325CB153C646600CF0159 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7D325CC153C646600CF0159 /* Build configuration list for PBXNativeTarget "IconSetter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7D325CD153C646600CF0159 /* Debug */,
+				F7D325CE153C646600CF0159 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F7D325C5153C646600CF0159 /* IconSetter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F7D325C6153C646600CF0159 /* IconSetter.xcdatamodel */,
+			);
+			currentVersion = F7D325C6153C646600CF0159 /* IconSetter.xcdatamodel */;
+			path = IconSetter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F7D325AF153C646500CF0159 /* Project object */;
+}
