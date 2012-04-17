@@ -177,7 +177,12 @@ int main(int argc, const char * argv[])
                 
             }
         }else{
-            printf("Usage: IconSetter < < -r > <pathToFile> > | < <pathToFile> <pathToImage> > | \n\t< <pathToFile> <pathToIcons> <state> > \n");
+            printf("Usage: IconSetter < < -r > <pathToFile> > | < <pathToFile> <pathToImage> > | \n\t< <pathToFile> <pathToIcons> <state> > \n\n ");
+            printf("pathToFile : name of the file to change the icon for\n");
+            printf("-r : remove the current icon from the given file and revert to default\n");                  
+            printf("pathToImage : name of the image file to replace the icon with\n");
+            printf("pathToIcons : location of the icons for individual states\n");
+            printf("state : state of the file: synced,notSynced,syncing\n");
             exit(1);
         }
     
