@@ -7,7 +7,6 @@
 //
 
 
-
 @interface IconManager : NSObject
 
 - (NSImage*) getBadgeForState: (NSString*) state AndIconPath: (NSString*) path;
@@ -29,6 +28,8 @@
         NSImage *newIcon = [[NSImage new] initWithContentsOfFile:imageFile];
         
         [[NSWorkspace sharedWorkspace] setIcon:newIcon forFile:file options:0];
+
+        [newIcon release];
          return YES;
     }
          
@@ -53,7 +54,9 @@
 }
 
 - (NSImage*) getCurrentIcon:(NSString *)file{
-    
+
+    if(![[NSFileManager defaultManager] fileExistsAtPath:file]) return nil;
+
     [[NSWorkspace sharedWorkspace] setIcon:nil forFile:file options:0];
     NSImage *iconImg = [[NSWorkspace sharedWorkspace] iconForFile:file];
     
@@ -68,8 +71,12 @@
 }
 
 - (NSImage*) getBadgeForState: (NSString*) state AndIconPath: (NSString*) path{
-    NSString *badge;
-    
+    NSString *badge = [NSString alloc];
+
+    if(![[NSFileManager defaultManager] fileExistsAtPath:path]){
+        return nil;
+    }
+
     if([@"notSynced" isEqualToString:state]){
         badge = [path stringByAppendingString:@"/notSynced.png"];
     }else if([@"synced" isEqualToString:state]){
@@ -77,15 +84,14 @@
     }else if([@"syncing" isEqualToString:state]){
         badge = [path stringByAppendingString:@"/syncing.png"];
     }
-    
-    NSImage *badgeImg = [[NSImage new] initWithContentsOfFile:badge];
-    
-    if(badge == nil){ return nil;}
-    
+
+    if(badge == nil || ![[NSFileManager defaultManager] fileExistsAtPath:badge]) return nil;
+
+    NSImage *badgeImg = [[[NSImage new] initWithContentsOfFile:badge] autorelease];
+
+    [badge release];
+
     return badgeImg;
-    
-    
-    return nil;
     
 }
 
@@ -100,17 +106,14 @@
     NSSize newBadgeSize = NSMakeSize(icon.size.width/2, icon.size.height/2);
     
     [badge setSize:newBadgeSize];
-    
-    
+
     [icon lockFocus];
     [badge drawInRect:NSMakeRect(icon.size.width - badge.size.width, 0, badge.size.width, badge.size.height) 
              fromRect:NSZeroRect 
-            operation:NSCompositeSourceOver
+             operation:NSCompositeSourceOver
              fraction:1.0];
     [icon unlockFocus];
-    
-    
-    
+
     return icon;
 }
 
@@ -135,7 +138,7 @@ int main(int argc, const char * argv[])
         //NSLog(@"filename: %@ icon: %@",file,icon);
         
         
-            if([[IconManager new] setIconForFile:file AndIconPath:iconPath AndState:state]){
+            if([[[IconManager new] autorelease] setIconForFile:file AndIconPath:iconPath AndState:state]){
                 return 0;
             }else{
                 printf("Icon could not be set\n");
@@ -151,6 +154,7 @@ int main(int argc, const char * argv[])
                 
                 if([[NSFileManager defaultManager]fileExistsAtPath:file]){
                     [[NSWorkspace sharedWorkspace] setIcon:nil forFile:file options:0];
+                    [pool release];
                     return 0;
                 }else{
                     printf("File not found: %s\n",argv[2]);
@@ -163,7 +167,8 @@ int main(int argc, const char * argv[])
                 
                 if([[NSFileManager defaultManager] fileExistsAtPath:file] && [[NSFileManager defaultManager] fileExistsAtPath:iconPath]){
                     
-                    if([[IconManager new] replaceIconOfFile:file AndImageFile:iconPath]){
+                    if([[[IconManager new] autorelease] replaceIconOfFile:file AndImageFile:iconPath]){
+                        [pool release];
                         return 0;
                     }else{
                         printf("Could not set new icon\n");
@@ -185,12 +190,6 @@ int main(int argc, const char * argv[])
             printf("state : state of the file: synced,notSynced,syncing\n");
             exit(1);
         }
-    
-        
-        
-    [pool drain];
-        return 0;
-
 }
 
 
