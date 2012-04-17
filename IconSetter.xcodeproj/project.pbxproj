@@ -12,6 +12,7 @@
 		F7D325C2153C646600CF0159 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D325C1153C646600CF0159 /* main.m */; };
 		F7D325C7153C646600CF0159 /* IconSetter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7D325C5153C646600CF0159 /* IconSetter.xcdatamodeld */; };
 		F7D325C9153C646600CF0159 /* IconSetter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7D325C8153C646600CF0159 /* IconSetter.1 */; };
+		F7D325D0153C724400CF0159 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D325CF153C724400CF0159 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,9 +33,10 @@
 		F7D325BC153C646600CF0159 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F7D325BE153C646600CF0159 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F7D325C1153C646600CF0159 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F7D325C4153C646600CF0159 /* IconSetter-Prefix.pch */ = {isa = PBXFileReference; path = "IconSetter-Prefix.pch"; sourceTree = "<group>"; };
+		F7D325C4153C646600CF0159 /* IconSetter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IconSetter-Prefix.pch"; sourceTree = "<group>"; };
 		F7D325C6153C646600CF0159 /* IconSetter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IconSetter.xcdatamodel; sourceTree = "<group>"; };
 		F7D325C8153C646600CF0159 /* IconSetter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = IconSetter.1; sourceTree = "<group>"; };
+		F7D325CF153C724400CF0159 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D325D0153C724400CF0159 /* AppKit.framework in Frameworks */,
 				F7D325BD153C646600CF0159 /* CoreData.framework in Frameworks */,
 				F7D325BF153C646600CF0159 /* Foundation.framework in Frameworks */,
 			);
@@ -70,6 +73,7 @@
 		F7D325BB153C646500CF0159 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7D325CF153C724400CF0159 /* AppKit.framework */,
 				F7D325BC153C646600CF0159 /* CoreData.framework */,
 				F7D325BE153C646600CF0159 /* Foundation.framework */,
 			);
@@ -196,6 +200,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -203,8 +208,12 @@
 		F7D325CD153C646600CF0159 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CURRENT_PROJECT_VERSION = 0.6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IconSetter/IconSetter-Prefix.pch";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,8 +221,13 @@
 		F7D325CE153C646600CF0159 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CURRENT_PROJECT_VERSION = 0.6;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IconSetter/IconSetter-Prefix.pch";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -237,6 +251,7 @@
 				F7D325CE153C646600CF0159 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
